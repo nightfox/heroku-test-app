@@ -60,7 +60,7 @@ development:
 production:
   sessions:
     default:
-      uri: <%= ENV['MONGOLAB_URI'] %>
+      uri: <%= ENV['MONGOLAB_URL'] %>
       options:
         skip_version_check: true
         safe: true
