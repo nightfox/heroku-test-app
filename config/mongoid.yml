@@ -6,7 +6,7 @@ development:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
 
-      uri: ENV['MONGOLAB_URI']# Provides the hosts the default session can connect to. Must be an array
+      uri: mongodb://rubish:password@ds037617-a.mongolab.com:37617/heroku_app7694746# Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
 
       options:
@@ -60,7 +60,7 @@ development:
 production:
   sessions:
     default:
-      uri: <%= ENV['MONGOLAB_URL'] %>
+      uri: mongodb://rubish:password@ds037617-a.mongolab.com:37617/heroku_app7694746
       options:
         skip_version_check: true
         safe: true
