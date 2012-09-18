@@ -1,0 +1,147 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-17 19:34:32 +0530
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/anirvan/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/anirvan/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/anirvan/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/anirvan/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-09-17 19:34:37 +0530
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 59ms
+
+ActiveRecord::StatementInvalid (Could not find table 'posts'):
+  app/controllers/posts_controller.rb:5:in `index'
+
+
+  Rendered /Users/anirvan/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/anirvan/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/anirvan/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.8ms)
+Connecting to database specified by database.yml
+  [1m[36m (18.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (6.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (2.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20120917140302)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120917140302')
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("posts")
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-09-17 19:35:14 +0530
+Connecting to database specified by database.yml
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (14.3ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (9.4ms)
+Compiled posts.css  (25ms)  (pid 6916)
+Compiled scaffolds.css  (11ms)  (pid 6916)
+Compiled application.css  (62ms)  (pid 6916)
+Compiled jquery.js  (4ms)  (pid 6916)
+Compiled jquery_ujs.js  (0ms)  (pid 6916)
+Compiled posts.js  (2059ms)  (pid 6916)
+Compiled application.js  (2303ms)  (pid 6916)
+Completed 200 OK in 2694ms (Views: 2651.3ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-09-17 19:35:18 +0530
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-09-17 19:35:18 +0530
+Served asset /posts.css - 200 OK (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-17 19:35:18 +0530
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-17 19:35:18 +0530
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-09-17 19:35:18 +0530
+Served asset /posts.js - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-17 19:35:18 +0530
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-17 19:35:18 +0530
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-17 19:35:18 +0530
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2012-09-17 19:35:20 +0530
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (122.4ms)
+  Rendered posts/new.html.erb within layouts/application (134.1ms)
+Completed 200 OK in 160ms (Views: 153.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-09-17 19:35:28 +0530
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cLONXWTBZQvD0XsX54wYXbVov38jw8p27n8jwGHxsHI=", "post"=>{"name"=>"asdasd", "title"=>"fasdfdas", "content"=>"neopresfasdasf"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (356.8ms)[0m  INSERT INTO "posts" ("content", "created_at", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["content", "neopresfasdasf"], ["created_at", Mon, 17 Sep 2012 14:05:28 UTC +00:00], ["name", "asdasd"], ["title", "fasdfdas"], ["updated_at", Mon, 17 Sep 2012 14:05:28 UTC +00:00]]
+  [1m[36m (29.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/posts/1
+Completed 302 Found in 391ms (ActiveRecord: 386.6ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-09-17 19:35:28 +0530
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cLONXWTBZQvD0XsX54wYXbVov38jw8p27n8jwGHxsHI=", "post"=>{"name"=>"asdasd", "title"=>"fasdfdas", "content"=>"neopresfasdasf"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "name", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "neopresfasdasf"], ["created_at", Mon, 17 Sep 2012 14:05:28 UTC +00:00], ["name", "asdasd"], ["title", "fasdfdas"], ["updated_at", Mon, 17 Sep 2012 14:05:28 UTC +00:00]]
+  [1m[35m (17.0ms)[0m  commit transaction
+Redirected to http://127.0.0.1:3000/posts/2
+Completed 302 Found in 20ms (ActiveRecord: 17.4ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2012-09-17 19:35:28 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+  [1m[36m (11.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20120917140302)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("posts")
