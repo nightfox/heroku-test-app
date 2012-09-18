@@ -145,3 +145,5 @@ Migrating to CreatePosts (20120917140302)
   [1m[35m (0.2ms)[0m  select sqlite_version(*)
   [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
   [1m[35m (0.1ms)[0m  PRAGMA index_list("posts")
+  MOPED: 50.56.79.183:27017 COMMAND      database=admin command={:ismaster=>1} (1178.6509ms)
+  MOPED: 50.56.79.183:27017 COMMAND      database=admin command={:ismaster=>1} (1323.4980ms)

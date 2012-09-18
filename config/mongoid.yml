@@ -5,13 +5,13 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: alma_connect
+      database: heroku_app7694746
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        - 50.56.79.183:27017
+        - ds037617-a.mongolab.com:37617
       username: rubish
-      password:
+      password: password
       options:
         # Change whether the session persists in safe mode by default.
         # (default: false)
