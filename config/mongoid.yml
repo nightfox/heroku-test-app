@@ -5,13 +5,10 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: heroku_app7694746
-      # Provides the hosts the default session can connect to. Must be an array
+
+      uri: ENV['MONGOLAB_URI']# Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
-      hosts:
-        - ds037617-a.mongolab.com:37617
-      username: rubish
-      password: password
+
       options:
         # Change whether the session persists in safe mode by default.
         # (default: false)
@@ -63,10 +60,6 @@ development:
 production:
   sessions:
     default:
-      database: heroku_app7694746
-      hosts:
-        - ds037617-a.mongolab.com:37617
-      username: rubish
-      password: password
+      uri: ENV['MONGOLAB_URI']
       options:
         consistency: :strong
