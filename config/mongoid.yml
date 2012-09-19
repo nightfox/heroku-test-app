@@ -1,20 +1,20 @@
 development:
   sessions:
     default:
-      uri: mongodb://<user>:<password>@ds037617-a.mongolab.com:37617/heroku_app7694746
+      uri: mongodb://rubish:pass@ds037627-a.mongolab.com:37627/almaconnect-test-db
       options:
         consistency: :strong
   options:
 test:
   sessions:
     default:
-      uri: mongodb://<user>:<password>@ds037617-a.mongolab.com:37617/heroku_app7694746
+      uri: mongodb://rubish:pass@ds037627-a.mongolab.com:37627/almaconnect-test-db
       options:
         consistency: :strong
 production:
   sessions:
     default:
-      uri: mongodb://<user>:<password>@ds037617-a.mongolab.com:37617/heroku_app7694746
+      uri: mongodb://rubish:pass@ds037627-a.mongolab.com:37627/almaconnect-test-db
       options:
-        consistency: :strong
-
+        skip_version_check: true
+        safe: true
