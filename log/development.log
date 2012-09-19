@@ -147,3 +147,99 @@ Migrating to CreatePosts (20120917140302)
   [1m[35m (0.1ms)[0m  PRAGMA index_list("posts")
   MOPED: 50.56.79.183:27017 COMMAND      database=admin command={:ismaster=>1} (1178.6509ms)
   MOPED: 50.56.79.183:27017 COMMAND      database=admin command={:ismaster=>1} (1323.4980ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-19 10:34:59 +0530
+Processing by PostsController#index as HTML
+  MOPED: 184.73.57.230:37617 COMMAND      database=admin command={:ismaster=>1} (3273.3352ms)
+  MOPED: 184.73.57.230:37617 QUERY        database=heroku_app7694746 collection=posts selector={} flags=[] limit=0 skip=0 fields=nil (614.8398ms)
+  Rendered posts/index.html.erb within layouts/application (5514.1ms)
+Completed 200 OK in 5707ms (Views: 5706.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-19 10:35:06 +0530
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-09-19 10:35:06 +0530
+Served asset /posts.css - 200 OK (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-09-19 10:35:06 +0530
+Served asset /posts.js - 200 OK (24ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 10:35:06 +0530
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-19 10:35:06 +0530
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-19 10:35:06 +0530
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-19 10:35:06 +0530
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-19 10:35:22 +0530
+Processing by PostsController#index as HTML
+  MOPED: 184.73.57.230:37617 COMMAND      database=admin command={:ismaster=>1} (1344.0990ms)
+  MOPED: 184.73.57.230:37617 QUERY        database=heroku_app7694746 collection=posts selector={} flags=[] limit=0 skip=0 fields=nil (700.1657ms)
+  Rendered posts/index.html.erb within layouts/application (2992.1ms)
+Completed 200 OK in 2998ms (Views: 2997.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-19 10:35:25 +0530
+Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-09-19 10:35:25 +0530
+Served asset /posts.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-19 10:35:25 +0530
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-19 10:35:25 +0530
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-09-19 10:35:25 +0530
+Served asset /posts.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-19 10:35:25 +0530
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 10:35:25 +0530
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2012-09-19 10:35:29 +0530
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (67.2ms)
+  Rendered posts/new.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 98ms (Views: 97.6ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2012-09-19 10:35:35 +0530
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3UD0o5wUrzJinjxLAoGzs458V6kEX2YRMDZ78Q5hxZ4=", "post"=>{"name"=>"21312313", "title"=>"2131231", "content"=>"123123123123"}, "commit"=>"Create Post"}
+  MOPED: 184.73.57.230:37617 COMMAND      database=admin command={:ismaster=>1} (2485.5721ms)
+  MOPED: 184.73.57.230:37617 INSERT       database=heroku_app7694746 collection=posts documents=[{"_id"=>"505952a5dde8e2ef0c000001", "name"=>"21312313", "title"=>"2131231", "content"=>"123123123123"}] flags=[] (0.2282ms)
+Redirected to http://127.0.0.1:3000/posts/505952a5dde8e2ef0c000001
+Completed 302 Found in 6389ms
+
+
+Started GET "/posts/505952a5dde8e2ef0c000001" for 127.0.0.1 at 2012-09-19 10:35:41 +0530
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"505952a5dde8e2ef0c000001"}
+  MOPED: 184.73.57.230:37617 QUERY        database=heroku_app7694746 collection=posts selector={"_id"=>"505952a5dde8e2ef0c000001"} flags=[] limit=0 skip=0 fields=nil (600.9002ms)
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 665ms (Views: 62.2ms)
