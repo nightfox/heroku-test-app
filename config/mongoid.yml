@@ -13,3 +13,9 @@ production:
       uri: mongodb://rubish:password@ds037617-a.mongolab.com:37617/heroku_app7694746
       options:
         consistency: :strong
+test:
+  sessions:
+    default:
+      uri: mongodb://rubish:password@ds037617-a.mongolab.com:37617/heroku_app7694746
+      options:
+        consistency: :strong
