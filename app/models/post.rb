@@ -1,9 +1,3 @@
-class Post
-  include Mongoid::Document
-
-  field :content, type: String
-  field :name, type: String
-  field :title, type: String
-
-
+class Post < ActiveRecord::Base
+  attr_accessible :content, :name, :title
 end
