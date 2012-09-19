@@ -5,8 +5,8 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-
-      uri: mongodb://rubish:password@ds037617-a.mongolab.com:37617/heroku_app7694746# Provides the hosts the default session can connect to. Must be an array
+      uri: mongodb://rubish:password@ds037617-a.mongolab.com:37617/heroku_app7694746
+      # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
 
       options:
