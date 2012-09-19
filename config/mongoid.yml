@@ -58,9 +58,7 @@ development:
     # Ensure all times are UTC in the app side. (default: false)
     # use_utc: false
 production:
-  sessions:
-    default:
-      uri: mongodb://rubish:password@ds037617-a.mongolab.com:37617/heroku_app7694746
-      options:
-        skip_version_check: true
-        safe: true
+  uri: mongodb://rubish:password@ds037617-a.mongolab.com:37617/heroku_app7694746
+  options:
+    skip_version_check: true
+    safe: true
